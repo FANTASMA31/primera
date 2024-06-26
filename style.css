@@ -1,0 +1,320 @@
+* {
+	box-sizing: border-box;
+}
+
+body,header,nav,div,ul,li,h1,h2,h3 {
+	padding: 0;
+	margin: 0;
+}
+body {
+	--color-prin:#921a01;
+	--text-color:#270a03;
+	--bg-color:#f6e3df;
+	background-color: var(--bg-color);
+	height: 400dvh;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.container-fondo {
+}
+.fondo {
+	position: absolute;
+	height: 150dvh;
+	width: 100dvw;
+	filter: blur(5px) brightness(80%);
+	
+
+	
+}
+
+.header {
+	width: 100%;
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	container-name: header;
+	container-type: inline-size;
+}
+
+
+.logito {
+	max-width: 100px;
+	margin: 15px 15px;
+
+}
+.header-nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+	flex-direction: row;
+	position: absolute;
+	display: none;
+	top: 40px;
+	right: 10px;
+	border: 2px solid var(--text-color);
+	border-radius:10px;
+
+	
+
+}
+
+.header_nav-list {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	width: 100%;
+	align-items: center;
+	font-size: 1.8rem;
+	background-color: var(--text-color);
+	color: white;
+}
+
+.link-nav:hover {
+	color: var(--bg-color);
+}
+
+
+.item-nav {
+	list-style: none;
+	padding: 15px;
+	border-bottom: 2px solid white;
+	width: 100%;
+}
+.item-nav:last-child {
+	border: none;
+}
+
+
+
+.item-registre {
+	list-style: none;
+}
+
+.link-registre {
+	color: var(--bg-color);
+	text-decoration: none;
+}
+
+
+.link-nav {
+	text-decoration: none;
+	color: white;
+}
+
+.registre {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	font-size: 1.7rem;
+	width: 60%;
+	align-items: center;
+	text-align: center;
+	font-weight: 900;
+
+
+	
+}
+
+
+/* botones de registro y inicio de sesion */
+
+.login {
+	background-color: var(--text-color);
+	padding: 10px 20px;
+	border-radius: 50px;
+	border: 2px solid var(--text-color);
+	color: var(--bg-color);
+	width: 100%;
+	display: flex;
+
+}
+
+.login:hover {
+	background-color: transparent;
+	color: var(--text-color);
+}
+
+.registra:hover {
+	color: var(--text-color);
+}
+
+
+
+/* area de boton responsivo */
+
+
+.header_input {
+	display: none;
+}
+
+.header_boton {
+	position: absolute;
+	right:10px;
+	top: 5px;
+	user-select: none;
+	font-size: 3rem;
+	font-weight: 900;
+}
+
+
+.header_input:checked ~ .header-nav {
+		display: flex;
+	}
+
+
+
+
+/* MEDIA QUERIES */
+
+@container header (min-width: 900px) {
+	.header-nav {
+		display: flex;
+		position: sticky;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.header_nav-list {
+		flex-direction: row;
+		background-color: transparent;
+	}
+
+	.header-nav:hover {
+		border: 2px solid var(--bg-color);
+		border-radius: 10px;
+	}
+
+
+	.link-nav {
+		color: var(--text-color);
+	}
+
+
+	.item-nav {
+		border: none;
+	}
+
+	.header_boton {
+		display: none;
+	}
+
+	.fondo {
+		width: 99dvh;
+		left: 0;
+	}
+
+}
+
+
+/*MAIN SECTION*/
+
+.main {
+	position: relative;
+	margin: 200px auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	height: 600px;
+	color: var(--bg-color);
+	font-size: 1.4rem;
+	padding: 10px;
+	margin-bottom: 400px;
+	text-align: center;
+
+}
+
+.parrafo {
+	width: 100%;
+}
+
+
+
+/* MEDIA QUERIES DEL MAIN  */
+@media screen and (min-width:600px) {
+	.main {
+		margin-top: 200px;
+		margin-bottom: 400px;
+		font-size: 2rem;
+	}
+}
+
+
+
+
+/* aside */
+.segundario {
+	padding: 5px;
+	position: relative;
+	font-size: 1.8rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	color: var(--text-color);
+	flex:1;
+
+}
+
+
+.parrafo_1 {
+	
+	margin: 10px;
+	
+}
+
+.ejemplo-web {
+	width: 50%;
+	margin: 10px auto;
+
+}
+
+.ejemplo-web2 {
+	width: 50%;
+}
+
+
+/* footer section */
+
+footer {
+	width: 100%;
+	height: 200px;
+	background-color: var(--color-prin);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: auto;
+}
+
+.logo-footer {
+	width: 100px;
+	font-weight: 900;
+}
+
+
+.sociales {
+	width: 50px;
+	
+
+}
+
+.container-sociales {
+	display: flex;
+	flex-direction: row;
+}
+
+.sociales-container {
+	display: flex;
+
+
+}
+.list-sociales {
+	list-style: none;
+}
